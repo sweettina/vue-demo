@@ -1,18 +1,30 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+    <CustomInput :value.sync="test"  />
+    <div>test的值{{test}}</div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
+import CustomInput from '@/components/CustomInput'
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
-  }
+    CustomInput
+  },
+  data() {
+    return {
+      
+      test:1
+    }
+  },
+  methods: {
+    
+
+  },
 }
 </script>
